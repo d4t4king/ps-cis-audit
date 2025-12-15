@@ -85,6 +85,7 @@ function Get-ThisBitLockerVolumes {
 [int]$ChecksPassed = 0
 [int]$ChecksFailed = 0
 Write-Output "##################  1.0 Inventory and Control if Enterprise Assets             ##################"
+Write-Output "Getting computer info.....standby......"
 $pcinfo = Get-ComputerInfo -ProgressAction SilentlyContinue
 if ($pcinfo.CsDomain -eq 'WORKGROUP') {
     Write-Host "    Computer does not appear to be joined to a domain.  (Domain = $($pcinfo.CsDomain))"  -ForegroundColor "Red"
