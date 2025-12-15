@@ -68,7 +68,7 @@ function Get-ThisBitLockerVolumes {
         #     continue
         # }
         try {
-            $status = (Get-BitLockerVolume -MountPoint $drv.Root -ErrorAction SilentlyContinue).ProtectionStatus
+            $status = (Get-BitLockerVolume -MountPoint $drv.Root -ErrorAction Continue).ProtectionStatus
             $BLStatus[$drv.Root] = $status
         }
         catch [Microsoft.Management.Infrastructure.CimException] {
