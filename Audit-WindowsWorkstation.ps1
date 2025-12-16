@@ -84,7 +84,7 @@ function Get-ThisBitLockerVolumes {
 [int]$RunningCheckTotal = 0
 [int]$ChecksPassed = 0
 [int]$ChecksFailed = 0
-Write-Output "##################  1.0 Inventory and Control if Enterprise Assets             ##################"
+Write-Output "##################  1.0 Inventory and Control if Enterprise Assets                ##################"
 Write-Output "Getting computer info.....standby......"
 $pcinfo = Get-ComputerInfo -ProgressAction SilentlyContinue
 if ($pcinfo.CsDomain -eq 'WORKGROUP') {
@@ -95,30 +95,38 @@ if ($pcinfo.CsDomain -eq 'WORKGROUP') {
     $ChecksPassed += 1
 }
 $RunningCheckTotal += 1
-Write-Output "##################    1.1 Asset Inventory                                      ##################"
-Write-Output "##################    1.2 Address Unauthorized Assets                          ##################"
-Write-Output "##################    1.3 Utilize and Active Directory Tool                    ##################"
-Write-Output "##################    1.4 DHCP Logging                                         ##################"
-Write-Output "##################    1.5 Passive AssetDiscovery                               ##################"
-Write-Output "##################  2.0 Inventory and Control of Software Assets               ##################"
-Write-Output "##################    2.1 Establish and Maintain a Software Inventory          ##################"
-Write-Output "##################    2.2 Ensure Authorized Software is Currently Supported    ##################"
-Write-Output "##################    2.3 Address Unauthorized Software                        ##################"
-Write-Output "##################    2.4 Automated Software Inventory Tools                   ##################"
-Write-Output "##################    2.5 Allowlist Authorized Software                        ##################"
-Write-Output "##################    2.6 Allowlist Authorizerd Libraries                      ##################"
-Write-Output "##################    2.7 Allowlist Authorized Scripts                         ##################"
-Write-Output "##################  3.0 Data Protection                                        ##################"
-Write-Output "##################    3.1 Establish and Maintain Data Manegement Process       ##################"
-Write-Output "##################    3.2 Establish and Maintain Data Inventory                ##################"
-Write-Output "##################    3.3 Configure Data ACLs                                  ##################"
-Write-Output "##################    3.4 Enforce Data Retention                               ##################"
-Write-Output "##################    3.5 Securely Dispose of Data                             ##################"
-Write-Output "##################    3.6 Encrypt Data on End-User Devices                     ##################"
+Write-Output "##################    1.1 Asset Inventory                                         ##################"
+Write-Output "##################    1.2 Address Unauthorized Assets                             ##################"
+Write-Output "##################    1.3 Utilize and Active Directory Tool                       ##################"
+Write-Output "##################    1.4 DHCP Logging                                            ##################"
+Write-Output "##################    1.5 Passive AssetDiscovery                                  ##################"
+Write-Output "##################  2.0 Inventory and Control of Software Assets                  ##################"
+Write-Output "##################    2.1 Establish and Maintain a Software Inventory             ##################"
+Write-Output "##################    2.2 Ensure Authorized Software is Currently Supported       ##################"
+Write-Output "##################    2.3 Address Unauthorized Software                           ##################"
+Write-Output "##################    2.4 Automated Software Inventory Tools                      ##################"
+Write-Output "##################    2.5 Allowlist Authorized Software                           ##################"
+Write-Output "##################    2.6 Allowlist Authorizerd Libraries                         ##################"
+Write-Output "##################    2.7 Allowlist Authorized Scripts                            ##################"
+Write-Output "##################  3.0 Data Protection                                           ##################"
+Write-Output "##################    3.1 Establish and Maintain Data Manegement Process          ##################"
+Write-Output "##################    3.2 Establish and Maintain Data Inventory                   ##################"
+Write-Output "##################    3.3 Configure Data ACLs                                     ##################"
+Write-Output "##################    3.4 Enforce Data Retention                                  ##################"
+Write-Output "##################    3.5 Securely Dispose of Data                                ##################"
+Write-Output "##################    3.6 Encrypt Data on End-User Devices                        ##################"
 Get-ThisBitLockerVolumes
-Write-Output "##################    3.7 Establish and Maintain Data Classification Scheme    ##################"
-Write-Output "##################  Identification and Authentication                          ##################"
-Write-Output "##################      Password Policies                                      ##################"
+Write-Output "##################    3.7 Establish and Maintain Data Classification Scheme       ##################"
+Write-Output "##################    3.8 Document Data Flows                                     ##################"
+Write-Output "##################    3.9 Encrypt data on Removable Media                         ##################"
+Write-Output "##################    3.10 Encrypt Sensitive Data in Transit                      ##################"
+Write-Output "##################    3.11 Encrypt Sensitive Date at Rest                         ##################"
+Write-Output "##################    3.12 Segment Data Processing and Storage Based on Sensitity ##################"
+Write-Output "##################    3.13 Deploy a Data Loss Prevention Solution                 ##################"
+Write-Output "##################    3.14 Log Sensitive Data Access                              ##################"
+
+Write-Output "##################  Identification and Authentication                             ##################"
+Write-Output "##################      Password Policies                                         ##################"
 
 $passPol = Get-NetAccountsOutput
 #Write-Output "Force User Logoff: $forceUserLogoff"
