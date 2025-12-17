@@ -124,6 +124,9 @@ Write-Output "##################    3.11 Encrypt Sensitive Date at Rest         
 Write-Output "##################    3.12 Segment Data Processing and Storage Based on Sensitity ##################"
 Write-Output "##################    3.13 Deploy a Data Loss Prevention Solution                 ##################"
 Write-Output "##################    3.14 Log Sensitive Data Access                              ##################"
+Write-Output "##################  4.0 Secure Configuration of Enterprise Assets and Software    ##################"
+Write-Output "##################    4.1 Establish and Maintain a Secure Configuration Process   ##################"
+
 
 Write-Output "##################  Identification and Authentication                             ##################"
 Write-Output "##################      Password Policies                                         ##################"
